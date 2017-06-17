@@ -1,0 +1,26 @@
+{
+  "name": "escalante-zion-coin",
+  "version": "1.0.0",
+  "description": "Lexer and Parser for the Zion Coin blockchain",
+  "main": "lib/escalante.js",
+  "scripts": {
+    "lint+build+test": "yarn run lint && yarn run build && yarn run test",
+    "lint": "echo linting... && eslint ./src/**/*.js && echo 'successfully linted'",
+    "build": "echo building... && babel src/ -d lib/ && echo 'successfully built'",
+    "prepublish": "yarn run build",
+    "test": "echo running server tests... && tape tests/**/*.js && echo 'successfully completed tests'"
+  },
+  "author": "Craig OConnor",
+  "license": "ISC",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^3.19.0",
+    "flow-bin": "^0.48.0",
+    "tape": "^4.6.3"
+  }
+}
